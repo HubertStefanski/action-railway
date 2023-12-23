@@ -1,5 +1,5 @@
-name: 'Deploy to Railway'
-description: 'A Github Action to deploy to Railway'
+name: 'Deploy to Railway with Service ID'
+description: 'A Github Action to deploy to Railway with a specified Service ID'
 
 branding:
   icon: check
