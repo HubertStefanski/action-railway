@@ -1,11 +1,10 @@
 #!/bin/sh -l
 
-if [ $1 && $2 ]; then
-    export RAILWAY_TOKEN=$1
-    export RAILWAY_SERVICE=$2
+if [ -n "$1" ] && [ -n "$2" ]; then
+    export RAILWAY_TOKEN="$1"
+    export RAILWAY_SERVICE="$2"
 else
-  echo "RAILWAY_TOKEN and RAILWAY_SERVICE must be defined"
-
+    echo "RAILWAY_TOKEN and RAILWAY_SERVICE must be defined"
 fi
 
 railway up --service ${RAILWAY_SERVICE} --detach || error_code=$?
