@@ -9,6 +9,9 @@ inputs:
   railway_token:
     description: 'The Railway Token'
     required: false
+  railway_service:
+    description: 'the Railway Service identifier against which the deployment should be run'
+    required: false
 
 outputs:
   status:
@@ -19,3 +22,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.railway_token }}
+    - ${{ inputs.railway_service }}
